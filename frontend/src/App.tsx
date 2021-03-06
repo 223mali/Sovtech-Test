@@ -8,6 +8,7 @@ import {
   ApolloProvider,
   from,
 } from "@apollo/client";
+import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import { onError } from "@apollo/client/link/error";
 
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
@@ -53,6 +54,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
+      <ApolloHooksProvider client={client}>
       <div style={style.root} className="app-root ">
         <Header />
         <div style={style.content}>
@@ -61,6 +63,7 @@ function App() {
           </Switch>
         </div>
       </div>
+      </ApolloHooksProvider>
     </ApolloProvider>
   );
 }
