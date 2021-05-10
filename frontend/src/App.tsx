@@ -54,7 +54,6 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <ApolloHooksProvider client={client}>
       <div style={style.root} className="app-root ">
         <Header />
         <div style={style.content}>
@@ -63,7 +62,6 @@ function App() {
           </Switch>
         </div>
       </div>
-      </ApolloHooksProvider>
     </ApolloProvider>
   );
 }

@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect } from 'react';
 import CSS from 'csstype'
 import { useDispatch, useSelector } from 'react-redux';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/client';
 
 // import {RootStore} from '../../Store'
 import { GET_RANDOM_JOKE } from '../../GraphQL/Queries';
@@ -26,7 +26,7 @@ const PopupComponent =  ({ category}: PopupComponentI)=> {
     const popupState = useSelector((state:RootStore)=>state.popup)
     const {data, error, loading} =  useQuery(GET_RANDOM_JOKE, {
         variables: {category},
-        suspend:true
+        // suspend:true
     })  
     // const [joke, setJoke] = useState()
     const jokeState = useSelector((state: RootStore)=>state.joke)
