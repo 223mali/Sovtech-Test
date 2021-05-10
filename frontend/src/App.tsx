@@ -8,7 +8,6 @@ import {
   ApolloProvider,
   from,
 } from "@apollo/client";
-import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import { onError } from "@apollo/client/link/error";
 
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
